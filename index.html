@@ -2,11 +2,16 @@
     <head>
         <title>Face recognition</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
+        <center>
     <h1>Face Recognition</h1>
 
     <p style="font-size: 22px;">Model is trained to identify the following objects: </p>
@@ -21,20 +26,18 @@
    <br><br>
 
         <label>Webcam View-</label>
-        <div id="camera">
+        <div id="camera"></div>
             <br><br>
             <div id="result"></div>
-           <br><br>
-            <button onclick="take_snapshot();" class="btn btn-info">Take Picture</button>
-            <br><br>
-            <button onclick="check()" class="btn btn-success">Identify Image</button>
-            <br><br>
-            
-            <h4>Object: <span id="obj_name"></span> </h4>
-            <h4>Accuracy: <span id="obj_accuracy"></span> </h4>
 
+        <button onclick="take_snapshot();" class="btn btn-info">Take Picture</button>
+        <br><br>
+        <button onclick="check()" class="btn btn-success">Identify Image</button>
+        
+        <h4>Family Member: <span id="obj_name"></span> </h4>
+        <h4>Accuracy: <span id="obj_accuracy"></span> </h4>
 
-        </div>
+    </center>
     </div>
 
 
